@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Etiqueta Meter</title>
+    <link rel="stylesheet" href="meter.css">
+</head>
+<body>
+<h1>html5 meter element</h1>
+
+<meter id="meter" value=".5" max="1" max="0" high=".75" low=".25"></meter>
+
+<p>Note:- Edit the code below for fun! to tweak the meter gauge above.</p>
+<div class="live-code">
+  &lt;meter max=<input id="max" value="1.0" maxlength="3"> min=<input id="min" value="0.0" maxlength="3"> value=<input id="value" value="0.5" maxlength="3"> high=<input id="high" value=".75" maxlength="3"> low=<input id="low" value=".25" maxlength="3"> optimum=<input id="optimum" value="0.5" maxlength="3">&gt;&lt;/meter&gt;
+</div>
+
+
+
+<dl>
+  <dt>
+    Case 1 - No attributes
+    <xmp><meter></meter></xmp>
+  </dt>
+  <dd><meter></meter></dd>
+  
+  <dt>
+    Case 2 - value < max (default: min=0, max=1)
+    <xmp><meter value=".5"></meter></xmp>
+  </dt>
+  <dd><meter value=".5"></meter></dd>
+  
+  <dt>
+    Case 3 - value = max (default: min=0, max=1)
+    <xmp><meter value="1"></meter></xmp>
+  </dt>
+  <dd><meter value="1"></meter></dd>
+  
+  <dt>
+    Case 4 - value > max (default: min=0, max=1)
+    <xmp><meter value="5"></meter></xmp>
+  </dt>
+  <dd><meter value="5"></meter> <span>(if value > max then value = max)</span></dd>
+  
+  <dt>
+    Case 5 - value < min (default: min=0, max=1)
+    <xmp><meter value="-.5"></meter></xmp>
+  </dt>
+  <dd><meter value="-.5"></meter> <span>(if value < min then value = min)</span></dd>
+  
+  <dt>
+    Case 6 - value = min (default: min=0, max=1)
+    <xmp><meter value="0"></meter></xmp>
+  </dt>
+  <dd><meter value="0"></meter></dd>
+  
+  <dt>
+    Case 7 - value > min (default: min=0, max=1)
+    <xmp><meter value=".5"></meter></xmp>
+  </dt>
+  <dd><meter value=".5"></meter></dd>
+
+  <dt>
+    Case 8 - value < high (default: min=0, max=1)
+    <xmp><meter value=".5" high=".8"></meter></xmp>
+  </dt>
+  <dd><meter value=".5" high=".8"></meter></dd>
+  
+  <dt>
+    Case 9 - value = high (default: min=0, max=1)
+    <xmp><meter value=".8" high=".8"></meter></xmp>
+  </dt>
+  <dd><meter value=".8" high=".8"></meter></dd>
+  
+  <dt>
+    Case 10 - value > high (default: min=0, max=1)
+    <xmp><meter value=".9" high=".8"></meter></xmp>
+  </dt>
+  <dd>
+    <meter value=".9" high=".8"></meter>
+    <span>(if value > high then notice how the color changes)</span>
+  </dd>
+  
+  <dt>
+    Case 11 - value < low (default: min=0, max=1)
+    <xmp><meter value=".15" low=".25"></meter></xmp>
+  </dt>
+  <dd>
+    <meter value=".15" low=".25"></meter>
+    <span>(if value < low then notice how the color changes)</span>
+  </dd>
+  
+  <dt>
+    Case 12 - value = low (default: min=0, max=1)
+    <xmp><meter value=".25" low=".25"></meter></xmp>
+  </dt>
+  <dd><meter value=".25" low=".25"></meter></dd>
+  
+  <dt>
+    Case 13 - value > low (default: min=0, max=1)
+    <xmp><meter value=".5" low=".25"></meter></xmp>
+  </dt>
+  <dd>
+    <meter value=".5" low=".25"></meter>
+  </dd>
+  
+    <dt>
+    Case 14 - optimum < low < high (default: min=0, max=1)
+    <xmp><meter low=".25" optimum=".15" high=".75" value=".5"></meter></xmp>
+  </dt>
+  <dd>
+    <meter low=".25" optimum=".15" high=".75" value=".5"></meter>
+    <span>(if optimum < low then notice how the color changes)</span>
+  </dd>
+  
+ <dt>
+    Case 15 - low < optimum < high (default: min=0, max=1)
+    <xmp><meter low=".25" optimum=".5" high=".75" value=".5"></meter></xmp>
+  </dt>
+  <dd>
+    <meter low=".25" optimum=".5" high=".75" value=".5"></meter>
+  </dd>
+
+  <dt>
+    Case 16 - low < high < optimum (default: min=0, max=1)
+    <xmp><meter low=".25" optimum=".85" high=".75" value=".5"></meter></xmp>
+  </dt>
+  <dd>
+    <meter low=".25" optimum=".85" high=".75" value=".5"></meter>
+    <span>(if optimum > high then notice how the color changes)</span>
+  </dd>
+  
+    <dt>
+    Case 17 - value < low < high < optimum (default: min=0, max=1)
+    <xmp><meter low=".25" optimum=".8" high=".75" value=".2"></meter></xmp>
+  </dt>
+  <dd>
+    <meter low=".25" optimum=".8" high=".75" value=".2"></meter>
+    <span>(if value < low and optimum > high then notice how the color changes)</span>
+  </dd>
+
+      <dt>
+    Case 18 - value > high > low > optimum (default: min=0, max=1)
+    <xmp><meter low=".25" optimum=".2" high=".75" value=".8"></meter></xmp>
+  </dt>
+  <dd>
+    <meter low=".25" optimum=".2" high=".75" value=".8"></meter>
+    <span>(if value > high and optimum < low then notice how the color changes)</span>
+  </dd>
+
+</dl>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="js/mapa.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="meter.js"></script>
+</body>
+</html>
